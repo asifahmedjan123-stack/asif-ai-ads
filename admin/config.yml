@@ -1,0 +1,31 @@
+backend:
+  name: github
+  repo: asifahmedjan123-stack/asif-ai-ads   # set to the real repo once created
+  branch: main
+media_folder: img
+public_folder: img
+collections:
+  - name: site
+    label: Website
+    files:
+      - name: content
+        label: Site content
+        file: content.json
+        format: json
+        fields:
+          - {name: brand, label: Brand name}
+          - {name: tagline, label: Tagline (English)}
+          - {name: urdu, label: Urdu line}
+          - name: services
+            label: Services
+            widget: list
+            fields: [{name: title, label: Title}, {name: text, label: Description, widget: text}, {name: price, label: Price, default: Contact for price}]
+          - {name: steps, label: How it works steps, widget: list, field: {name: step, label: Step}}
+          - name: samples
+            label: Sample work
+            widget: list
+            fields: [{name: image, label: Image, widget: image}, {name: caption, label: Caption}]
+          - name: contact
+            label: Contact
+            widget: object
+            fields: [{name: whatsapp, label: WhatsApp number (92...)}, {name: phone, label: Phone}, {name: email, label: Email}, {name: freelancer, label: Freelancer link}, {name: location, label: Location}]

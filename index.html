@@ -29,7 +29,7 @@ $('services').innerHTML=(d.services||[]).map(x=>`<div class="c"><h3>${E(x.title)
 $('steps').innerHTML=(d.steps||[]).map(x=>`<li>${E(x)}</li>`).join('');
 $('samples').innerHTML=(d.samples||[]).map(x=>`<div><img src="${E(x.image)}" alt="${E(x.caption)}" loading="lazy"><p>${E(x.caption)}</p></div>`).join('');
 const wa='https://wa.me/'+encodeURIComponent(c.whatsapp);document.querySelectorAll('.wal').forEach(a=>{a.href=wa;a.target='_blank';a.rel='noopener';});
-$('ct').innerHTML=`WhatsApp / Phone: <a href="tel:+${E(c.whatsapp)}">${E(c.phone)}</a><br>Email: <a href="mailto:${E(c.email)}">${E(c.email)}</a><br>Freelancer: <a href="${E(c.freelancer)}" target="_blank" rel="noopener">${E(c.freelancer)}</a><br>Location: ${E(c.location)}`;
+$('ct').innerHTML=`${c.name?`<strong>${E(c.name)}</strong><br>`:''}WhatsApp / Phone: <a href="tel:+${E(c.whatsapp)}">${E(c.phone)}</a><br>Email: <a href="mailto:${E(c.email)}">${E(c.email)}</a><br>Freelancer: <a href="${E(c.freelancer)}" target="_blank" rel="noopener">${E(c.freelancer)}</a><br>Location: ${E(c.location)}`;
 $('ft').textContent='\u00a9 2026 '+d.brand;});
 </script>
 </body></html>

@@ -28,4 +28,4 @@ collections:
           - name: contact
             label: Contact
             widget: object
-            fields: [{name: whatsapp, label: WhatsApp number (92...)}, {name: phone, label: Phone}, {name: email, label: Email}, {name: freelancer, label: Freelancer link}, {name: location, label: Location}]
+            fields: [{name: name, label: Display name}, {name: whatsapp, label: WhatsApp number (92...)}, {name: phone, label: Phone}, {name: email, label: Email}, {name: freelancer, label: Freelancer link}, {name: location, label: Location}]
